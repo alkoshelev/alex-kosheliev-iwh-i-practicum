@@ -24,7 +24,7 @@ app.get('/', async (req, res) => {
     try {
         const response = await axios.get(getCustom, { headers });
         const data = response.data.results;
-        res.json(data);
+        res.render('homepage', { title: 'Custom Object Table', data });
         
     } catch(err) {
         console.error(err);
