@@ -57,7 +57,7 @@ app.post('/update-cobj', async (req, res) => {
 
     try { 
         await axios.post(createObject, update, { headers } );
-        res.redirect('back');
+        res.redirect('/');
     } catch(err) {
         console.error(err);
     }
